@@ -10,7 +10,7 @@ public class Problem001Test {
 
     @DisplayName("multiplesOf3and5(1000) should return 233168.")
     @Test
-    public void test1000() {
+    public void test() {
         assertEquals(233168 , Problem001.multiplesOf3And5Java7(1000));
         assertEquals(233168 , Problem001.multiplesOf3And5(1000));
     }
