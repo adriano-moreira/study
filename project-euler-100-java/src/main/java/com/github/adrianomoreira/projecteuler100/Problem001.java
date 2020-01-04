@@ -23,10 +23,10 @@ public class Problem001 {
 
     public static int multiplesOf3And5(int number) {
         IntPredicate isMultiplesOf3Or5 = (value) -> value % 3 == 0 || value % 5 == 0;
-        return IntStream
-                .range(1, number)
+        return IntStream.range(1, number)
                 .filter(isMultiplesOf3Or5)
-                .reduce(Integer::sum).getAsInt();
+                .reduce(Integer::sum)
+                .getAsInt();
     }
 
 }
