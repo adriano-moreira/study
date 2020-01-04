@@ -1,4 +1,4 @@
-package com.github.adrianomoreira;
+package com.github.adrianomoreira.projecteuler100;
 
 import com.github.adrianomoreira.projecteuler100.Problem002;
 import org.junit.jupiter.api.DisplayName;
