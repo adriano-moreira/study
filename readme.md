@@ -2,7 +2,7 @@
 
 # Project Euler 100
 
-* hashtag [#ProjectEuler100](https://twitter.com/ProjectEuler100)
+* hashtag [#ProjectEuler100](https://twitter.com/hashtag/ProjectEuler100?src=hashtag_click&f=live)
 
 * 20 year old [Project Euler](https://projecteuler.net/) site
 
