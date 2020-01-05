@@ -1,6 +1,5 @@
 package com.github.adrianomoreira.projecteuler100;
 
-import com.github.adrianomoreira.projecteuler100.Problem002;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +30,5 @@ public class Problem002Test {
     public void test4() {
         assertEquals(350704366, Problem002.fiboEvenSum(43));
     }
-//    Your function should return an even value.%
 
 }
