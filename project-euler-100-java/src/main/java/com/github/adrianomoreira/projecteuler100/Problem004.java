@@ -12,20 +12,23 @@ public class Problem004 {
     }
 
     public static double largestPalindromeProduct(double value) {
-        int max = (int)Math.pow(10, value) - 1;
+        int max = (int) Math.pow(10, value) - 1;
         int min = (int) Math.pow(10, value - 1) - 1;
-        List<Integer> palindromes = new ArrayList<>();
+
+        int largestPP = 0;
+
         for (int x = min; x <= max; x++) {
             for (int y = min; y <= max; y++) {
                 int product = x * y;
-                String asString = Integer.toString(product);
-                String reverse = reverse(asString);
-                if (reverse.equals(asString)) {
-                    palindromes.add(product);
+                if (product > largestPP) {
+                    String asString = Integer.toString(product);
+                    String reverse = reverse(asString);
+                    if (reverse.equals(asString)) {
+                        largestPP = product;
+                    }
                 }
             }
         }
-        palindromes.sort(Integer::compareTo);
-        return palindromes.get(palindromes.size() - 1);
+        return largestPP;
     }
 }
