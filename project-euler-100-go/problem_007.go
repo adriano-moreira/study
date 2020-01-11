@@ -20,9 +20,3 @@ func nthPrime(n int) int {
 	}
 	return prime
 }
-
-//nthPrime(6) should return 13.
-//nthPrime(10) should return 29.
-//nthPrime(100) should return 541.
-//nthPrime(1000) should return 7919.
-//nthPrime(10001) should return 104743.
