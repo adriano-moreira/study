@@ -29,7 +29,7 @@ public class Problem007Test {
     @DisplayName("nthPrime(1000) should return 7919")
     @Test
     public void test1000(){
-        assertEquals(nthPrime(100), 7919);
+        assertEquals(nthPrime(1000), 7919);
     }
 
     @DisplayName("nthPrime(10001) should return 104743")
