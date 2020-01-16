@@ -22,6 +22,12 @@ cd project_euler_100_dart
 flutter test
 ```
 
+to run Go version
+```
+cd project-euler-100-go
+go test
+```
+
 ---
 my twitter [@\_\_ray86__](https://twitter.com/__ray86__)
 
