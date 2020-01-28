@@ -1,7 +1,10 @@
 package main
 
+import "math"
+
 func isPrime(n int) bool {
-	for i := 2; i < n; i++ {
+	root := int(math.Sqrt(float64(n)))
+	for i := 2; i <= root; i++ {
 		if n%i == 0 {
 			return false
 		}

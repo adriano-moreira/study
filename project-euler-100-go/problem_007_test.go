@@ -9,4 +9,3 @@ func TestNthPrime(t *testing.T) {
 	expect(nthPrime(1000), 7919, t)
 	expect(nthPrime(10001), 104743, t)
 }
-
