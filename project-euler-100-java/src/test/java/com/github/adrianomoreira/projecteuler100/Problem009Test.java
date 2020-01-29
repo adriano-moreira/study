@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Problem009Test {
 
-    @DisplayName("specialPythagoreanTriplet(24) should return 31875000")
+    @DisplayName("specialPythagoreanTriplet(1000) should return 31875000")
     @Test
     public void test100() {
-        Assertions.assertEquals(31875000, Problem009.specialPythagoreanTriplet(100));
+        Assertions.assertEquals(31875000, Problem009.specialPythagoreanTriplet(1000));
     }
 
     @DisplayName("specialPythagoreanTriplet(24) should return 480")
