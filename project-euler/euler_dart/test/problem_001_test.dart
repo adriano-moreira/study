@@ -1,6 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-
-import 'package:project_euler_100_dart/problem_001.dart';
+import 'package:test/test.dart';
+import 'package:euler_dart/problem_001.dart';
 
 void main() {
   test("multiplesOf3and5(1000) should return 233168", () {

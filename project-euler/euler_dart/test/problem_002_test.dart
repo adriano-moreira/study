@@ -1,6 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
-import 'package:project_euler_100_dart/problem_002.dart';
+import 'package:euler_dart/problem_002.dart';
 
 void main() {
   test("fiboEvenSum(10) should return 44", () {

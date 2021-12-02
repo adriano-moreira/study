@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:project_euler_100_dart/problem_06.dart';
+import 'package:test/test.dart';
+import 'package:euler_dart/problem_06.dart';
 
 void main() {
   test("sumSquareDifference(10) should return 2640", () {

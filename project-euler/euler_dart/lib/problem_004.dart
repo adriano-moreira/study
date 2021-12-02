@@ -4,11 +4,11 @@ largestPalindromeProduct(int value) {
   final min = pow(10, value - 1) - 1;
   final max = pow(10, value) - 1;
 
-  var largest = 0;
+  num largest = 0;
 
-  for (int x = min; x <= max; x++) {
-    for (int y = min; y <= max; y++) {
-      final product = x * y;
+  for (var x = min; x <= max; x++) {
+    for (var y = min; y <= max; y++) {
+      final num product = x * y;
       if (product > largest) {
         final normal = product.toString();
         final reversed = normal.split('').reversed.join('');

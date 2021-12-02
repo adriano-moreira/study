@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:project_euler_100_dart/problem_005.dart';
+import 'package:test/test.dart';
+import 'package:euler_dart/problem_005.dart';
 
 void main() {
   test('smallestMult(5) should return 60.', () {

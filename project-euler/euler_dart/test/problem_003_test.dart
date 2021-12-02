@@ -1,6 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
-import 'package:project_euler_100_dart/problem_003.dart';
+import 'package:euler_dart/problem_003.dart';
 
 void main() {
   test("largestPrimeFactor(2) should return 2", () {

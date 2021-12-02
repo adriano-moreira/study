@@ -1,0 +1,11 @@
+name: euler_dart
+description: A project euler challenge
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dev_dependencies:
+  test: ^1.19.5

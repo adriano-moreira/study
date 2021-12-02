@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:project_euler_100_dart/problem_008.dart';
+import 'package:test/test.dart';
+import 'package:euler_dart/problem_008.dart';
 
 void main() {
   test('largestProductinaSeries(4) should return 5832.', () {

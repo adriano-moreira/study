@@ -16,19 +16,10 @@ cd project-euler-100-java
 mvn clean test
 ```
 
-to run Dart version tests, require Flutter
+to run Dart version tests, require Dart 2.13
 ```
-cd project_euler_100_dart
-flutter test
+cd euler_dart
+dart test
 ```
-
-to run Go version
-```
-cd project-euler-100-go
-go test
-```
-
----
-my twitter [@\_\_ray86__](https://twitter.com/__ray86__)
 
  
