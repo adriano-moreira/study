@@ -16,9 +16,9 @@ public class Problem002 {
         return sequence;
     }
 
-    public static int fiboEvenSum(int nunber) {
+    public static int fiboEvenSum(int number) {
         IntPredicate isEven = (n) -> n % 2 == 0;
-        return fiboSequence(nunber)
+        return fiboSequence(number)
                 .stream()
                 .mapToInt(Integer::intValue)
                 .filter(isEven)
