@@ -9,8 +9,11 @@ fn multiples_of_3_and_5(n: i32) -> i32 {
 }
 
 fn multiples_of_3_and_5_fp(n: i32) -> i32 {
-    let is_mod_3_or_5 = |v: &i32| { v % 3 == 0 || v % 5 == 0 };
-    return (1..n).filter(is_mod_3_or_5).sum();
+    let is_mod_3_or_5 = |v: &i32| v % 3 == 0 || v % 5 == 0;
+
+    (1..n)
+        .filter(is_mod_3_or_5)
+        .sum()
 }
 
 #[cfg(test)]
@@ -32,5 +35,4 @@ mod test {
         assert_eq!(multiples_of_3_and_5_fp(19564), 89301183);
         assert_eq!(multiples_of_3_and_5_fp(8456), 16687353);
     }
-
 }
