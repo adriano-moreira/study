@@ -4,11 +4,11 @@
 
 * hashtag [#ProjectEuler100](https://twitter.com/hashtag/ProjectEuler100?src=hashtag_click&f=live)
 
-* 20 year old [Project Euler](https://projecteuler.net/) site
+* 20-year-old [Project Euler](https://projecteuler.net/) site
 
 * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
 
-My initial intention is write the code on Java and Dart, end rewrite all test of [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
+My initial intention is written the code on Java and Dart, and rewrite all test of [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
 
 to run java version tests, require Java 11 and maven
 ```
