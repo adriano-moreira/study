@@ -5,3 +5,7 @@ edition = "2021"
 
 [dependencies]
 num-bigint = "0.4"
+
+[[bin]]
+path = "src/problem001.rs"
+name = "euler001"
