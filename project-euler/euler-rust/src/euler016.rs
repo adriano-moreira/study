@@ -14,9 +14,11 @@ fn power_digit_sum(p: u32) -> u32 {
     sum
 }
 
+fn main() {}
+
 #[cfg(test)]
 mod test {
-    use crate::problem016::*;
+    use super::*;
 
     #[test]
     fn test() {

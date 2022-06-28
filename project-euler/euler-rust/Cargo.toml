@@ -9,8 +9,20 @@ num-bigint = "0.4"
 
 [[bin]]
 name = "euler001"
-path = "src/problem001.rs"
+path = "src/euler001.rs"
 
 [[bin]]
 name = "euler002"
-path = "src/problem002.rs"
+path = "src/euler002.rs"
+
+[[bin]]
+name = "euler003"
+path = "src/euler003.rs"
+
+[[bin]]
+name = "euler012"
+path = "src/euler012.rs"
+
+[[bin]]
+name = "euler016"
+path = "src/euler016.rs"

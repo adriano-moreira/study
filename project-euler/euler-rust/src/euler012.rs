@@ -27,6 +27,8 @@ fn divisible_triangle_number(n: u64) -> u64 {
     sum
 }
 
+fn main() {}
+
 #[cfg(test)]
 mod test {
     use super::*;
