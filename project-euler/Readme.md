@@ -7,6 +7,7 @@
 * 20-year-old [Project Euler](https://projecteuler.net/) site
 
 * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
+* [harkerrank](https://www.hackerrank.com/contests/projecteuler/challenges) version
 
 My initial intention is written the code on Java and Dart, and rewrite all test of [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
 
@@ -22,4 +23,8 @@ cd euler_dart
 dart test
 ```
 
- 
+to run Rust version test cases
+```
+cd euler-rust
+cargo test
+```

@@ -1,4 +1,5 @@
 [package]
+authors = ["Adriano Moreira"]
 name = "euler-rust"
 version = "0.1.0"
 edition = "2021"
@@ -7,5 +8,9 @@ edition = "2021"
 num-bigint = "0.4"
 
 [[bin]]
-path = "src/problem001.rs"
 name = "euler001"
+path = "src/problem001.rs"
+
+[[bin]]
+name = "euler002"
+path = "src/problem002.rs"

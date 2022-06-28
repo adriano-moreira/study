@@ -30,12 +30,13 @@ fn sum_multiples_of_3_and_5_fast(n: u64) -> u64 {
     sum_multiples_of_in(3, n) + sum_multiples_of_in(5, n) - sum_multiples_of_in(15, n)
 }
 
+/// https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem
 fn main() {
     let stdin = std::io::stdin();
     let mut buf = String::new();
     stdin.read_line(&mut buf).unwrap();
-    let nr_tests = buf.trim().parse::<u64>().unwrap();
-    for _ in 0..nr_tests {
+    let nr_test_cases = buf.trim().parse::<u64>().unwrap();
+    for _ in 0..nr_test_cases {
         buf = String::new();
         stdin.read_line(&mut buf).unwrap();
         let value = buf.trim().parse::<u64>().unwrap();
