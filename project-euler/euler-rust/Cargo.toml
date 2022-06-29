@@ -26,3 +26,7 @@ path = "src/euler012.rs"
 [[bin]]
 name = "euler016"
 path = "src/euler016.rs"
+
+[[bin]]
+name = "prime_study"
+path = "src/prime_study.rs"
