@@ -1,8 +1,12 @@
+fn sqrt(n: u64) -> u64 {
+    (n as f32).sqrt() as u64
+}
+
 fn is_prime(n: u64) -> bool {
     if n < 2 {
         return false;
     }
-    for x in 2..n.sqrt() {
+    for x in 2..(sqrt(n) + 1) {
         if n % x == 0 {
             return false;
         }
@@ -14,7 +18,7 @@ fn next_prime(n: u64) -> u64 {
     let mut i = n;
     'outer: loop {
         i += 1;
-        let max = ((i as f32).sqrt() as u64) + 1;
+        let max = sqrt(i) + 1;
         for x in 2..max {
             if i % x == 0 {
                 continue 'outer;
@@ -24,31 +28,42 @@ fn next_prime(n: u64) -> u64 {
     }
 }
 
+trait PrimeUtils {
+    fn next_prime(&self) -> Self;
+    fn is_prime(&self) -> bool;
+}
+impl PrimeUtils for u64 {
+    fn next_prime(&self) -> Self {
+        next_prime(*self)
+    }
+
+    fn is_prime(&self) -> bool {
+        is_prime(*self)
+    }
+}
+
+
 fn main() {
-    // for n in 0..100 {
-    //     if is_prime(n) {
-    //         // println!("n: {:?} is prime", n);
-    //         print!("{:?},", n);
-    //     } else {
-    //         // println!(".");
-    //     }
-    // }
-
-    // let mut n = 2;
-    // while n < 1_00000 {
-    //     n = next_prime(n);
-    //     println!("{}", n);
-    // }
-
-    // println!("{}", next_prime(100_000_000_000));
 }
 
 #[cfg(test)]
 mod test {
-    use crate::next_prime;
+    use super::*;
 
     #[test]
-    fn main() {
-        dbg!(next_prime(200_000_000));
+    fn next() {
+        dbg!(200_000_000u64.next_prime());
+    }
+
+    #[test]
+    fn is() {
+        for n in 0..100u64 {
+            if n.is_prime() {
+                // println!("n: {:?} is prime", n);
+                print!("{:?},", n);
+            } else {
+                // println!(".");
+            }
+        }
     }
 }

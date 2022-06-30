@@ -20,6 +20,10 @@ name = "euler003"
 path = "src/euler003.rs"
 
 [[bin]]
+name = "euler004"
+path = "src/euler004.rs"
+
+[[bin]]
 name = "euler012"
 path = "src/euler012.rs"
 
