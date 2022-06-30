@@ -2,12 +2,16 @@ fn largest_prime_factor(n: u64) -> u64 {
     let mut rest = n;
     let mut largest = 1;
     let mut i = 2;
+    let sqrt = (n as f32).sqrt() as u64;
     while largest < rest {
         if rest % i == 0 {
             largest = i;
             rest = rest / i;
         } else {
-            i += 1;
+            i +=1;
+            if largest == 1 && i > sqrt {
+                return n;
+            }
         }
     }
     return largest;

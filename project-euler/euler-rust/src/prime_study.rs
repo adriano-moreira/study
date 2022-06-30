@@ -2,7 +2,7 @@ fn is_prime(n: u64) -> bool {
     if n < 2 {
         return false;
     }
-    for x in 2..n {
+    for x in 2..n.sqrt() {
         if n % x == 0 {
             return false;
         }
@@ -14,7 +14,8 @@ fn next_prime(n: u64) -> u64 {
     let mut i = n;
     'outer: loop {
         i += 1;
-        for x in 2..i {
+        let max = ((i as f32).sqrt() as u64) + 1;
+        for x in 2..max {
             if i % x == 0 {
                 continue 'outer;
             }
@@ -40,5 +41,14 @@ fn main() {
     // }
 
     // println!("{}", next_prime(100_000_000_000));
-    println!("{}", next_prime(200_000_000));
+}
+
+#[cfg(test)]
+mod test {
+    use crate::next_prime;
+
+    #[test]
+    fn main() {
+        dbg!(next_prime(200_000_000));
+    }
 }
