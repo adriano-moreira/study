@@ -5,6 +5,8 @@ import 'package:euler_dart/problem_003.dart';
 void main() {
   test("largestPrimeFactor(2) should return 2", () {
     expect(largestPrimeFactor(2), 2);
+    expect(largestPrimeFactor(10), 5);
+    expect(largestPrimeFactor(17), 17);
   });
   test("largestPrimeFactor(5) should return 5", () {
     expect(largestPrimeFactor(5), 5);

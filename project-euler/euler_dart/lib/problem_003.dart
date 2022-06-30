@@ -1,11 +1,14 @@
-int largestPrimeFactor(int value) {
-  int prime = 2, max = 1;
-  while (prime <= value) {
-    if (value % prime == 0) {
-      max = prime;
-      value = (value / prime).truncate();
-    } else
-      prime++;
+int largestPrimeFactor(int n) {
+  int largest = 1;
+  int current = 2;
+  int end = n;
+  while (current <= end) {
+    if (end % current == 0) {
+      largest = current;
+      end = (end / current).truncate();
+    } else {
+      current++;
+    }
   }
-  return max;
+  return largest;
 }
