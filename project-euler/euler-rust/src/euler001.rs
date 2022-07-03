@@ -35,7 +35,7 @@ fn main() {
     let stdin = std::io::stdin();
     let mut buf = String::new();
     stdin.read_line(&mut buf).unwrap();
-    let nr_test_cases = buf.trim().parse::<u64>().unwrap();
+    let nr_test_cases = buf.trim().parse::<u8>().unwrap();
     for _ in 0..nr_test_cases {
         buf = String::new();
         stdin.read_line(&mut buf).unwrap();
