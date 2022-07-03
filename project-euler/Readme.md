@@ -11,19 +11,19 @@
 
 My initial intention is written the code on Java and Dart, and rewrite all test of [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
 
-to run java version tests, require Java 11 and maven
+to run ☕️java test cases, require Java 11 and maven
 ```
-cd project-euler-100-java
+cd euler-java
 mvn clean test
 ```
 
-to run Dart version tests
+to run 🎯Dart test cases
 ```
 cd euler_dart
 dart test
 ```
 
-to run Rust version test cases
+to run 🦀Rust test cases
 ```
 cd euler-rust
 cargo test
