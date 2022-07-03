@@ -7,7 +7,7 @@
 * 20-year-old [Project Euler](https://projecteuler.net/) site
 
 * [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
-* [harkerrank](https://www.hackerrank.com/contests/projecteuler/challenges) version
+* [hackerrank](https://www.hackerrank.com/contests/projecteuler/challenges) version
 
 My initial intention is written the code on Java and Dart, and rewrite all test of [freeCodeCamp](https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/) version
 
@@ -17,7 +17,7 @@ cd project-euler-100-java
 mvn clean test
 ```
 
-to run Dart version tests, require Dart 2.13
+to run Dart version tests
 ```
 cd euler_dart
 dart test
