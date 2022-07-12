@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn sum_multiples_of_3_and_5_bt(n: u64) -> u64 {
     let mut sum: u64 = 0;
     for i in 1..n {
@@ -5,9 +6,10 @@ fn sum_multiples_of_3_and_5_bt(n: u64) -> u64 {
             sum += i;
         }
     }
-    return sum;
+    sum
 }
 
+#[allow(dead_code)]
 fn sum_multiples_of_3_and_5_bt_fp(n: u64) -> u64 {
     let is_mod_3_or_5 = |v: &u64| v % 3 == 0 || v % 5 == 0;
 

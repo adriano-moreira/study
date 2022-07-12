@@ -11,7 +11,7 @@ fn is_prime(n: u64) -> bool {
             return false;
         }
     }
-    return true;
+    true
 }
 
 fn next_prime(n: u64) -> u64 {

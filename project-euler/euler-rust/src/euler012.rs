@@ -5,12 +5,12 @@ fn factors_count(n: u64) -> u64 {
 
     for i in 2..end {
         if n % i == 0 {
-            count = count + 2;
+            count += 2;
         }
     }
 
     if end * end == n {
-        count = count + 1;
+        count += 1;
     }
 
     count
@@ -20,14 +20,16 @@ fn divisible_triangle_number(n: u64) -> u64 {
     let mut i = 1;
     let mut sum = i;
     while factors_count(sum) < n {
-        i = i + 1;
-        sum = sum + i;
+        i += 1;
+        sum += i;
     }
 
     sum
 }
 
-fn main() {}
+fn main() {
+    divisible_triangle_number(5);
+}
 
 #[cfg(test)]
 mod test {

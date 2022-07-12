@@ -6,7 +6,7 @@ fn largest_prime_factor(n: u64) -> u64 {
     while largest < rest {
         if rest % i == 0 {
             largest = i;
-            rest = rest / i;
+            rest /= i;
         } else {
             i +=1;
             if largest == 1 && i > sqrt {
@@ -14,7 +14,7 @@ fn largest_prime_factor(n: u64) -> u64 {
             }
         }
     }
-    return largest;
+    largest
 }
 
 /// https://www.hackerrank.com/contests/projecteuler/challenges/euler003/problem

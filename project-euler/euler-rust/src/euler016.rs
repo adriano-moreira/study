@@ -3,7 +3,7 @@ use num_bigint::BigUint;
 fn power_digit_sum(p: u32) -> u32 {
     let string = "2".parse::<BigUint>().unwrap().pow(p).to_string();
     let a: Vec<_> = string.split("")
-        .filter(|e| e.trim().len() > 0)
+        .filter(|e| !e.is_empty())
         .map(|e| e.parse::<u32>().unwrap())
         .collect();
 
@@ -14,7 +14,9 @@ fn power_digit_sum(p: u32) -> u32 {
     sum
 }
 
-fn main() {}
+fn main() {
+    power_digit_sum(15);
+}
 
 #[cfg(test)]
 mod test {
