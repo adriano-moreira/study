@@ -7,38 +7,3 @@ edition = "2021"
 [dependencies]
 num-bigint = "0.4"
 
-[[bin]]
-name = "euler001"
-path = "src/euler001.rs"
-
-[[bin]]
-name = "euler002"
-path = "src/euler002.rs"
-
-[[bin]]
-name = "euler003"
-path = "src/euler003.rs"
-
-[[bin]]
-name = "euler004"
-path = "src/euler004.rs"
-
-[[bin]]
-name = "euler005"
-path = "src/euler005.rs"
-
-[[bin]]
-name = "euler006"
-path = "src/euler006.rs"
-
-[[bin]]
-name = "euler012"
-path = "src/euler012.rs"
-
-[[bin]]
-name = "euler016"
-path = "src/euler016.rs"
-
-[[bin]]
-name = "prime_study"
-path = "src/prime_study.rs"

@@ -16,7 +16,7 @@ fn factors_count(n: u64) -> u64 {
     count
 }
 
-fn divisible_triangle_number(n: u64) -> u64 {
+pub fn divisible_triangle_number(n: u64) -> u64 {
     let mut i = 1;
     let mut sum = i;
     while factors_count(sum) < n {
@@ -27,16 +27,12 @@ fn divisible_triangle_number(n: u64) -> u64 {
     sum
 }
 
-fn main() {
-    divisible_triangle_number(5);
-}
-
 #[cfg(test)]
 mod test {
     use super::*;
 
     #[test]
-    fn test() {
+    fn test_divisible_triangle_number() {
         assert_eq!(28, divisible_triangle_number(5));
         assert_eq!(630, divisible_triangle_number(23));
         assert_eq!(1385280, divisible_triangle_number(167));

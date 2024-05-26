@@ -1,5 +1,4 @@
-#[allow(dead_code)]
-fn sum_multiples_of_3_and_5_bt(n: u64) -> u64 {
+pub fn sum_multiples_of_3_and_5_bt(n: u64) -> u64 {
     let mut sum: u64 = 0;
     for i in 1..n {
         if i % 3 == 0 || i % 5 == 0 {
@@ -9,8 +8,7 @@ fn sum_multiples_of_3_and_5_bt(n: u64) -> u64 {
     sum
 }
 
-#[allow(dead_code)]
-fn sum_multiples_of_3_and_5_bt_fp(n: u64) -> u64 {
+pub fn sum_multiples_of_3_and_5_bt_fp(n: u64) -> u64 {
     let is_mod_3_or_5 = |v: &u64| v % 3 == 0 || v % 5 == 0;
 
     (1..n)
@@ -28,23 +26,8 @@ fn sum_multiples_of_in(n: u64, value: u64) -> u64 {
     (((t + 1) * t) / 2) * n
 }
 
-fn sum_multiples_of_3_and_5_fast(n: u64) -> u64 {
+pub fn sum_multiples_of_3_and_5_fast(n: u64) -> u64 {
     sum_multiples_of_in(3, n) + sum_multiples_of_in(5, n) - sum_multiples_of_in(15, n)
-}
-
-/// https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem
-fn main() {
-    let stdin = std::io::stdin();
-    let mut buf = String::new();
-    stdin.read_line(&mut buf).unwrap();
-    let nr_test_cases = buf.trim().parse::<u8>().unwrap();
-    for _ in 0..nr_test_cases {
-        buf = String::new();
-        stdin.read_line(&mut buf).unwrap();
-        let value = buf.trim().parse::<u64>().unwrap();
-        let resp = sum_multiples_of_3_and_5_fast(value);
-        println!("{}", resp);
-    }
 }
 
 #[cfg(test)]
