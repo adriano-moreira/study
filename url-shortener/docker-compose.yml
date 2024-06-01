@@ -1,0 +1,33 @@
+services:
+
+  quarkus:
+    image: quarkus-url-shortener:jvm
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+          cpus: 2.0
+    environment:
+      quarkus.profile: prod
+      quarkus.log.level: WARN
+      quarkus.datasource.db-kind: postgresql
+      quarkus.datasource.username: admin
+      quarkus.datasource.password: admin
+      quarkus.datasource.reactive.url: postgresql://db:5432/url_shortener
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: "url_shortener"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - postgres:/data/postgres
+
+volumes:
+  postgres:
