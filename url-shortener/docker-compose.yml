@@ -18,13 +18,13 @@ services:
       quarkus.datasource.reactive.url: postgresql://db:5432/url_shortener
 
   db:
-    image: postgres:15
+    image: postgres:16
     environment:
       POSTGRES_DB: "url_shortener"
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "admin"
     ports:
-      - "5435:5432"
+      - "5432:5432"
     volumes:
       - ./db:/docker-entrypoint-initdb.d
       - postgres:/data/postgres
