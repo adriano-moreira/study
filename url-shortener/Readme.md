@@ -1,9 +1,8 @@
 # url-shortener
 
-requirements:
+requirements to build and test:
  - docker
  - java 21 or above
- - rust
 
 ## build docker images
 ```sh

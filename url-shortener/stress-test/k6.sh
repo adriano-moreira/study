@@ -7,4 +7,4 @@ docker run --name k6 \
     --user ${UID}:12345 \
     -v "${PWD}":/app \
     -w /app \
-    grafana/k6:0.50.0 "$@"
+    grafana/k6:0.51.0 "$@"

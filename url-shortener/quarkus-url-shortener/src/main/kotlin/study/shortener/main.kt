@@ -31,6 +31,8 @@ class UrlAliasedRepository : PanacheRepositoryBase<UlrAliased, String>
 class UrlShortenerService(
     private val urlAliasedRepository: UrlAliasedRepository,
 ) {
+
+    @WithTransaction
     fun create(alias: String, url: String): Uni<Unit> {
         val e = UlrAliased()
         e.alias = alias
@@ -40,6 +42,7 @@ class UrlShortenerService(
             .replaceWithUnit()
     }
 
+    @WithSession
     fun get(alias: String): Uni<UlrAliased?> {
         return urlAliasedRepository
             .findById(alias)
@@ -51,7 +54,6 @@ class UrlShortenerResource(
     private val urlAliasedService: UrlShortenerService
 ) {
     @POST
-    @WithTransaction
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     fun create(
         @FormParam("alias") alias: String,
@@ -63,15 +65,15 @@ class UrlShortenerResource(
     }
 
     @GET
-    @WithSession
     @Path("/{alias}")
     fun get(@PathParam("alias") alias: String): Uni<Response> {
         return urlAliasedService
             .get(alias)
             .map {
-                if (it == null) {
-                    Response.status(Response.Status.NOT_FOUND).build()
-                }
+                //TODO: ...
+//                if (it == null) {
+//                    Response.status(Response.Status.NOT_FOUND).build()
+//                }
                 Response
                     .status(Response.Status.PERMANENT_REDIRECT)
                     .location(URI.create(it?.url!!)).build()

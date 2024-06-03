@@ -1,5 +1,17 @@
 services:
 
+  axum:
+    image: rust-axum-url-shortener
+    ports:
+      - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          memory: 512MB
+          cpus: 1.0
+    environment:
+      PG_CONNECTION_STRING: host=db user=admin password=admin dbname=url_shortener
+
   quarkus:
     image: quarkus-url-shortener:jvm
     ports:
@@ -7,8 +19,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 1GB
-          cpus: 2.0
+          memory: 512MB
+          cpus: 1.0
     environment:
       quarkus.profile: prod
       quarkus.log.level: WARN
@@ -19,6 +31,7 @@ services:
 
   db:
     image: postgres:16
+    tmpfs: /data/postgres
     environment:
       POSTGRES_DB: "url_shortener"
       POSTGRES_USER: "admin"
@@ -27,7 +40,3 @@ services:
       - "5432:5432"
     volumes:
       - ./db:/docker-entrypoint-initdb.d
-      - postgres:/data/postgres
-
-volumes:
-  postgres:

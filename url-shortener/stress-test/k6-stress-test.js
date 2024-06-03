@@ -1,13 +1,8 @@
 import http from 'k6/http'
 import {check} from 'k6'
 
-export const options = {
-    vus: 24,
-    duration: '30s',
-}
-
-const urlBase = `http://localhost:8080`
-
+//const urlBase = `http://localhost:8080`
+const urlBase = __ENV.HOST;
 
 function createAlias(alias, url) {
     const data = {
@@ -33,5 +28,3 @@ export function setup() {
 export default function () {
     get('gg')
 }
-
-

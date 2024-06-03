@@ -14,9 +14,12 @@ use tokio_postgres::NoTls;
 
 #[tokio::main]
 async fn main() {
-    println!("starting server");
+    println!("starting server...");
 
-    let manager = PostgresConnectionManager::new_from_stringlike("host=localhost user=admin password=admin dbname=url_shortener", NoTls)
+    let connection_string = std::env::var("PG_CONNECTION_STRING")
+        .unwrap_or(String::from("host=localhost user=admin password=admin dbname=url_shortener"));
+
+    let manager = PostgresConnectionManager::new_from_stringlike(connection_string, NoTls)
         .unwrap();
 
     let pool = Pool::builder()
@@ -30,7 +33,7 @@ async fn main() {
         .route("/:alias", get(from_alias))
         .with_state(pool);
 
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000")
         .await.unwrap();
 
     axum::serve(listener, app).await.unwrap();
